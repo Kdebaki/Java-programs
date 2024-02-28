@@ -1,0 +1,26 @@
+//14.learn and understand autobox and unbox feature in java and design and implement a class for student with the given attributes Name,RegNo,Sem,ia1,ia2,ia3.use constructors to instantiate objects.Implement a method to calculate average marks of internals. 
+package week3;
+import java.util.Scanner;
+public class CalculateAverage 
+{
+    public static void main(String[] args) {
+        float average =0.0f;
+        Scanner sc = new Scanner(System.in);
+        
+        /*This line declares array Integer Wrapper Object */
+        Integer ciel, cie2, cie3;
+        /* - Autobox
+        * The parsed value of integer constant is converted wrapper  Object */ 
+        System.out.println("Enter the score of First Internal:");
+        ciel = Integer.parseInt(sc.next());
+        System.out.println("Enter the score of Second Internal: ");
+        cie2 = Integer.parseInt(sc.next());
+        System.out.println("Enter the score of Third Internal: ");
+        cie3= Integer.parseInt(sc.next());
+        /* Unbox
+        * The wrapper Object value is converted into Primitive Data Type */ 
+        average = (float) (ciel + cie2 + cie3)/3;
+        System.out.println("The average Internal Score is "+average);
+        sc.close();
+    }
+}
